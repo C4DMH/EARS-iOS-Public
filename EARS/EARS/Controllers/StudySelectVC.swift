@@ -168,8 +168,8 @@ class StudySelectVC: UIViewController, UITextFieldDelegate, QRCodeVCDelegate {
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(waitTime), execute: {
                     AppDelegate.requestCount += 1
                     //params: code
-                    var request = URLRequest(url: NSURL(string: "\(studyCodeVerificationURL)?code=\(code!)")! as URL)
-                    request.httpMethod = "GET"
+                    var request = URLRequest(url: /* REDACTED */ as URL)
+                    request.httpMethod = "" //REDACTED
 
                     let task = URLSession.shared.dataTask(with: request) { data, response, error in
                         guard let data = data, error == nil else {                                                 // check for fundamental networking error
